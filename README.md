@@ -48,30 +48,30 @@ The model is trained using the following features:
 classroom-equipment-failure-risk-predictor/
 │
 ├── data/
-│   └── equipment_failure.db        # SQLite database
+│   └── equipment_failure.db          # SQLite database
 │
 ├── experiments/
-│   ├── equipment_failure_dataset.csv
-│   └── model_comparison.ipynb      # EDA + model comparison
+│   ├── equipment_failure_dataset.csv # Generated dataset
+│   └── model_comparison.ipynb        # EDA + model comparison
 │
 ├── models/
-│   └── logistic_regression_model.pkl
+│   └── logistic_regression_model.pkl # Trained model
 │
 ├── scripts/
-│   ├── __init__.py
-│   ├── generate_data.py            # Synthetic data generator
-│   ├── build_dataset.py            # Feature construction
-│   ├── export_dataset.py           # CSV export
-│   ├── init_db.py                  # Database initialization
-│   ├── train_model.py              # Single-model training
-│   └── train_models.py             # Multi-model comparison
+│   ├── __init__.py                   # Package initializer
+│   ├── generate_data.py              # Synthetic data generator
+│   ├── build_dataset.py              # Feature construction
+│   ├── export_dataset.py             # CSV export
+│   ├── init_db.py                    # Database initialization
+│   ├── train_model.py                # Single-model training
+│   └── train_models.py               # Multi-model comparison
 │
 ├── dashboard/
-│   └── app.py                      # Streamlit dashboard (local demo)
+│   └── app.py                        # Streamlit dashboard (local demo)
 │
-├── README.md
-├── requirements.txt
-└── .gitignore
+├── README.md                         # Project documentation
+├── requirements.txt                  # Dependencies
+└── .gitignore                        # Ignored files
 
 ---
 
@@ -107,17 +107,17 @@ This is a known **ML deployment issue (feature drift)** and is planned to be res
 
 ## 🧪 How to Run the Project
 
-### 1. Install Dependencies
+1. Install Dependencies
 pip install -r requirements.txt
 
-### 2. Generate Database
+2. Generate Database
 python -m scripts.generate_data
 python -m scripts.export_dataset
 
-### 3. Train Models
+3. Train Models
 python -m scripts.train_models
 
-### 4. Run DashBoard
+4. Run DashBoard
 streamlit run dashboard/app.py
 
 ## 🧪 Limitations & Future Works
