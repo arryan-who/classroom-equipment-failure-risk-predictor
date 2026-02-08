@@ -43,8 +43,9 @@ The model is trained using the following features:
 
 ---
 
-## 🗂️ Project Structure
+## 📁 Project Structure
 
+```
 classroom-equipment-failure-risk-predictor/
 │
 ├── data/
@@ -70,8 +71,9 @@ classroom-equipment-failure-risk-predictor/
 │   └── app.py                        # Streamlit dashboard (local demo)
 │
 ├── README.md                         # Project documentation
-├── requirements.txt                  # Dependencies
+├── requirements.txt                 # Dependencies
 └── .gitignore                        # Ignored files
+```
 
 ---
 
