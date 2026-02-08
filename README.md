@@ -110,19 +110,23 @@ This is a known **ML deployment issue (feature drift)** and is planned to be res
 ## 🧪 How to Run the Project
 
 1. Install Dependencies
-pip install -r requirements.txt
+   
+   pip install -r requirements.txt
 
 2. Generate Database
-python -m scripts.generate_data
-python -m scripts.export_dataset
+   
+   python -m scripts.generate_data
+   python -m scripts.export_dataset
 
 3. Train Models
-python -m scripts.train_models
+   
+   python -m scripts.train_models
 
 4. Run DashBoard
-streamlit run dashboard/app.py
+   
+   streamlit run dashboard/app.py
 
-## 🧪 Limitations & Future Works
+## 🚧 Limitations & Future Works
 
 - Align training and inference feature schemas
 - Retrain models with finalized feature set
