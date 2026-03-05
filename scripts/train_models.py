@@ -5,12 +5,21 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+import joblib
+import os
 
 from scripts.build_dataset import build_dataset
 
+os.makedirs("models", exist_ok=True)
 
 def evaluate_model(name, model, X_train, X_test, y_train, y_test):
     model.fit(X_train, y_train)
+
+    # for dashboard purpose
+    os.makedirs("models", exist_ok=True)
+    model_filename = f"models/{name.lower().replace(' ', '_')}_model.pkl"
+    joblib.dump(model, model_filename)
+
     preds = model.predict(X_test)
 
     return {
